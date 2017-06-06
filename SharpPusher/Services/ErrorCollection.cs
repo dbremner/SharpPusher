@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 
 namespace SharpPusher.Services
 {
-    public class ErrorCollection
+    public class ErrorCollection : IReadOnlyCollection<string>
     {
         public bool HasErrors => ErrorList.Count > 0;
 
@@ -47,6 +48,21 @@ namespace SharpPusher.Services
                 sb.AppendLine("- " + item);
             }
             return sb.ToString();
+        }
+
+        public IEnumerator<string> GetEnumerator()
+        {
+            return ErrorList.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable) ErrorList).GetEnumerator();
+        }
+
+        public int Count
+        {
+            get { return ErrorList.Count; }
         }
     }
 }
