@@ -16,8 +16,8 @@ namespace MVVMLib
         }
 
 
-        private Action methodToExecute;
-        private Func<bool> canExecuteMethod;
+        private readonly Action methodToExecute;
+        private readonly Func<bool> canExecuteMethod;
 
 
         public void RaiseCanExecuteChanged()
@@ -70,8 +70,8 @@ namespace MVVMLib
         }
 
 
-        private Action<T> methodToExecute;
-        private Func<T, bool> canExecuteMethod;
+        private readonly Action<T> methodToExecute;
+        private readonly Func<T, bool> canExecuteMethod;
 
 
         public void RaiseCanExecuteChanged()

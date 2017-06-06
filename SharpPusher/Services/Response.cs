@@ -12,7 +12,7 @@ namespace SharpPusher.Services
     {
         public bool HasErrors { get; internal set; }
 
-        internal List<string> ErrorList = new List<string>();
+        internal readonly List<string> ErrorList = new List<string>();
 
         /// <summary>
         /// Adds one error to the list of errors and changes the flag to indicate existance of errors.
