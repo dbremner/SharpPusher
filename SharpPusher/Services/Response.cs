@@ -30,7 +30,7 @@ namespace SharpPusher.Services
         /// <param name="multiError">List of errors to add.</param>
         internal void AddError(List<string> multiError)
         {
-            multiError.ForEach(x => ErrorList.Add(x));
+            ErrorList.AddRange(multiError);
             HasErrors = true;
         }
 
