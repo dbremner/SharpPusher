@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SharpPusher.Services.PushServices
 {
-    public class BlockchainInfo : Api
+    public sealed class BlockchainInfo : Api
     {
         public override string ApiName
         {

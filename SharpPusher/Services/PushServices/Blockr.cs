@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace SharpPusher.Services.PushServices
 {
-    public class Blockr : Api
+    public sealed class Blockr : Api
     {
         public override string ApiName
         {

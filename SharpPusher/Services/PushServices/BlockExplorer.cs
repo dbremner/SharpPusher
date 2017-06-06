@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SharpPusher.Services.PushServices
 {
-    public class BlockExplorer : Api
+    public sealed class BlockExplorer : Api
     {
         public override string ApiName
         {

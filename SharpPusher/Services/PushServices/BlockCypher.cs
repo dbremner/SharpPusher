@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace SharpPusher.Services.PushServices
 {
-    public class BlockCypher : Api
+    public sealed class BlockCypher : Api
     {
         public override string ApiName
         {

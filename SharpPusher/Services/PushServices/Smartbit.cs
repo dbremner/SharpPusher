@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace SharpPusher.Services.PushServices
 {
-    public class Smartbit : Api
+    public sealed class Smartbit : Api
     {
         public override string ApiName
         {
