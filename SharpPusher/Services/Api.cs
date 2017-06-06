@@ -36,8 +36,7 @@ namespace SharpPusher.Services
             {
                 try
                 {
-                    JObject tx = new JObject();
-                    tx.Add(jKey, txHex);
+                    var tx = new JObject {{jKey, txHex}};
 
                     HttpResponseMessage httpResp = await client.PostAsync(url, new StringContent(tx.ToString()));
                     resp.Result = await httpResp.Content.ReadAsStringAsync();
