@@ -101,14 +101,7 @@ namespace SharpPusher
         }
         private bool CanBroadcast()
         {
-            if (!string.IsNullOrWhiteSpace(RawTx) && !IsSending && selectedApi != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return !string.IsNullOrWhiteSpace(RawTx) && !IsSending && selectedApi != null;
         }
 
     }
