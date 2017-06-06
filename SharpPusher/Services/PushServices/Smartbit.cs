@@ -20,7 +20,7 @@ namespace SharpPusher.Services.PushServices
             }
 
             JObject jResult = JObject.Parse(resp.Result);
-            if ((bool)jResult["success"] == true)
+            if ((bool)jResult["success"])
             {
                 resp.Result = "Successfully done. Tx ID: " + jResult["txid"].ToString();
             }
