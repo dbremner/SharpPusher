@@ -28,7 +28,7 @@ namespace SharpPusher.Services
         /// <param name="jKey">The JSON key used for making the HttpContent in JSON format.</param>
         /// <param name="url">Api url to use.</param>
         /// <returns>Result of broadcasting.</returns>
-        protected async Task<Response<string>> PushTx(string txHex, string jKey, string url)
+        protected static async Task<Response<string>> PushTx(string txHex, string jKey, string url)
         {
             Response<string> resp = new Response<string>();
 

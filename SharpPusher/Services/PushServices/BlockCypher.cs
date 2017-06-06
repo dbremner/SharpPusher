@@ -13,7 +13,7 @@ namespace SharpPusher.Services.PushServices
 
         public override async Task<Response<string>> PushTx(string txHex)
         {
-            Response<string> resp = await base.PushTx(txHex, "tx", "https://api.blockcypher.com/v1/bcy/test/txs/push");
+            Response<string> resp = await PushTx(txHex, "tx", "https://api.blockcypher.com/v1/bcy/test/txs/push");
             if (resp.HasErrors)
             {
                 return resp;
