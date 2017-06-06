@@ -34,11 +34,7 @@ namespace MVVMLib
             {
                 return canExecuteMethod();
             }
-            if (methodToExecute != null)
-            {
-                return true;
-            }
-            return false;
+            return methodToExecute != null;
         }
 
         public event EventHandler CanExecuteChanged;
@@ -88,11 +84,7 @@ namespace MVVMLib
             {
                 return canExecuteMethod((T)parameter);
             }
-            if (methodToExecute != null)
-            {
-                return true;
-            }
-            return false;
+            return methodToExecute != null;
         }
 
         public event EventHandler CanExecuteChanged;
