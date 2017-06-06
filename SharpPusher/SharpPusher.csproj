@@ -65,7 +65,7 @@
     <Compile Include="Services\PushServices\BlockExplorer.cs" />
     <Compile Include="Services\PushServices\Blockr.cs" />
     <Compile Include="Services\PushServices\Smartbit.cs" />
-    <Compile Include="Services\Response.cs" />
+    <Compile Include="Services\ErrorCollection.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
