@@ -12,7 +12,7 @@ namespace SharpPusher.Services
     {
         public bool HasErrors => ErrorList.Count > 0;
 
-        internal readonly List<string> ErrorList = new List<string>();
+        private readonly List<string> ErrorList = new List<string>();
 
         /// <summary>
         /// Adds one error to the list of errors
