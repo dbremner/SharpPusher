@@ -3,11 +3,6 @@ using System.Text;
 
 namespace SharpPusher.Services
 {
-    public class Response<T> : ErrorCollection
-    {
-        public T Result { get; set; }
-    }
-
     public class ErrorCollection
     {
         public bool HasErrors => ErrorList.Count > 0;
