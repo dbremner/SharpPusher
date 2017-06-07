@@ -44,7 +44,7 @@ namespace SharpPusher.Services
                 catch (Exception ex)
                 {
                     string errMsg = (ex.InnerException == null) ? ex.Message : ex.Message + " " + ex.InnerException;
-                    resp.AddError(errMsg);
+                    resp.Errors.Add(errMsg);
                 }
             }
 

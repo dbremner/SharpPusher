@@ -14,7 +14,7 @@ namespace SharpPusher.Services.PushServices
         public override async Task<Response<string>> PushTx(string txHex)
         {
             Response<string> resp = await PushTx(txHex, "tx", "https://api.blockcypher.com/v1/bcy/test/txs/push");
-            if (resp.HasErrors)
+            if (resp.Errors.Any())
             {
                 return resp;
             }
@@ -22,7 +22,7 @@ namespace SharpPusher.Services.PushServices
             JObject jResult = JObject.Parse(resp.Result);
             if (jResult["error"] != null)
             {
-                resp.AddError(jResult["error"].ToString());
+                resp.Errors.Add(jResult["error"].ToString());
             }
             else
             {

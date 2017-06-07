@@ -88,9 +88,9 @@ namespace SharpPusher
             Status = "Broadcasting Transaction...";
 
             Response<string> resp = await SelectedApi.PushTx(RawTx);
-            if (resp.HasErrors)
+            if (resp.Errors.Any())
             {
-                Errors = resp.GetErrors();
+                Errors = resp.Errors.GetErrors();
                 Status = "Finished with error.";
             }
             else

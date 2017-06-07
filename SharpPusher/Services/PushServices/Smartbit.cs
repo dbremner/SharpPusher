@@ -14,7 +14,7 @@ namespace SharpPusher.Services.PushServices
         public override async Task<Response<string>> PushTx(string txHex)
         {
             Response<string> resp = await PushTx(txHex, "hex", "https://api.smartbit.com.au/v1/blockchain/pushtx");
-            if (resp.HasErrors)
+            if (resp.Errors.Any())
             {
                 return resp;
             }
@@ -26,7 +26,7 @@ namespace SharpPusher.Services.PushServices
             }
             else
             {
-                resp.AddError(jResult["error"]["message"].ToString());
+                resp.Errors.Add(jResult["error"]["message"].ToString());
             }
 
             return resp;

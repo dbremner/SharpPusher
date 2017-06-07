@@ -6,7 +6,10 @@ namespace SharpPusher.Services
 {
     public class ErrorCollection : IReadOnlyCollection<string>
     {
-        public bool HasErrors => ErrorList.Count > 0;
+        public bool Any()
+        {
+            return ErrorList.Count > 0;
+        }
 
         private readonly List<string> ErrorList = new List<string>();
 
@@ -14,7 +17,7 @@ namespace SharpPusher.Services
         /// Adds one error to the list of errors
         /// </summary>
         /// <param name="errorMessage">Error string to add.</param>
-        internal void AddError(string errorMessage)
+        internal void Add(string errorMessage)
         {
             ErrorList.Add(errorMessage);
         }
@@ -23,7 +26,7 @@ namespace SharpPusher.Services
         /// Adds multiple errors to the list of errors
         /// </summary>
         /// <param name="multiError">List of errors to add.</param>
-        internal void AddError(IEnumerable<string> multiError)
+        internal void Add(IEnumerable<string> multiError)
         {
             ErrorList.AddRange(multiError);
         }
