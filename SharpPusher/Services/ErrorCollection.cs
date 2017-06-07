@@ -26,7 +26,7 @@ namespace SharpPusher.Services
         /// Adds multiple errors to the list of errors
         /// </summary>
         /// <param name="multiError">List of errors to add.</param>
-        internal void Add(IEnumerable<string> multiError)
+        internal void AddRange(IEnumerable<string> multiError)
         {
             ErrorList.AddRange(multiError);
         }
@@ -34,7 +34,7 @@ namespace SharpPusher.Services
         /// <summary>
         /// Clears all errors
         /// </summary>
-        internal void ClearErrors()
+        internal void Clear()
         {
             ErrorList.Clear();
         }
